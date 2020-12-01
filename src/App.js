@@ -7,7 +7,12 @@ const LOCATION = "98115";
 class App extends Component {
   state = {
     currentWeather: [],
-    forecastWeather: {},
+    forecastWeather: {
+      alert: {},
+      current: {},
+      forecast: {},
+      location: {},
+    },
   };
   async fetchweather() {
     const response = await fetch(
@@ -28,6 +33,7 @@ class App extends Component {
     return (
       <Fragment>
         <div>TEST</div>
+        <div>{this.state.forecastWeather.location.name}</div>
       </Fragment>
     );
   }
