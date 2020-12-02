@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
 import "./App.css";
+import DaysContainer from "./daysContainer";
 const BASEURL = "http://api.weatherapi.com/v1";
 const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
 const LOCATION = "98115";
@@ -10,7 +11,9 @@ class App extends Component {
     forecastWeather: {
       alert: {},
       current: {},
-      forecast: {},
+      forecast: {
+        forecastday: [{ date: "" }],
+      },
       location: {},
     },
   };
@@ -32,8 +35,10 @@ class App extends Component {
   render() {
     return (
       <Fragment>
-        <div>TEST</div>
         <div>{this.state.forecastWeather.location.name}</div>
+        <br />
+
+        <DaysContainer forecastInfo={this.state.forecastWeather} />
       </Fragment>
     );
   }
