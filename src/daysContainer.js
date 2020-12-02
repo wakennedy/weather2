@@ -9,7 +9,19 @@ export default class DaysContainer extends Component {
   renderDays() {
     const { forecastInfo } = this.props;
     return forecastInfo.forecast.forecastday.map((info) => (
-      <th>{info.day.date}</th>
+      <th>{info.date}</th>
+    ));
+  }
+  renderMaxTemps() {
+    const { forecastInfo } = this.props;
+    return forecastInfo.forecast.forecastday.map((info) => (
+      <th>{info.day.maxtemp_f}</th>
+    ));
+  }
+  renderMinTemps() {
+    const { forecastInfo } = this.props;
+    return forecastInfo.forecast.forecastday.map((info) => (
+      <th>{info.day.mintemp_f}</th>
     ));
   }
   render() {
@@ -24,11 +36,14 @@ export default class DaysContainer extends Component {
             <th>Days</th>
             {this.renderDays()}
           </tr>
-          <tr />
-          Temps
-          <th>0</th>
-          <th>1</th>
-          <th>2</th>
+          <tr>
+            <th>High Temp</th>
+            {this.renderMaxTemps()}
+          </tr>
+          <tr>
+            <th>Low Temp</th>
+            {this.renderMinTemps()}
+          </tr>
         </table>
       </Fragment>
     );
