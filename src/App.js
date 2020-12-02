@@ -12,7 +12,25 @@ class App extends Component {
       alert: {},
       current: {},
       forecast: {
-        forecastday: [{ date: "" }],
+        forecastday: [
+          {
+            date: "",
+            day: {
+              avgtemp_f: 0,
+              daily_chance_of_rain: "",
+              maxtemp_f: 0,
+              mintemp_f: 0,
+              totalprecip_in: 0,
+            },
+            hour: [
+              {
+                feelslike_f: 0,
+                temp_f: 0,
+                recip_in: 0,
+              },
+            ],
+          },
+        ],
       },
       location: {},
     },
