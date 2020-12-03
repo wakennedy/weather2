@@ -29,7 +29,7 @@ export default class DaysContainer extends Component {
       <Fragment>
         <div>Day Container</div>
         <br />
-        <div>{this.renderInfo()}</div>
+        {/* <div>{this.renderInfo()}</div> */}
         <br />
         <table>
           <tr>

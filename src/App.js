@@ -61,11 +61,9 @@ class App extends Component {
       <Fragment>
         {/* <div>{this.state.forecastWeather.location.name}</div> */}
         <br />
-        {/* <DaysContainer /> */}
-        {/* {console.log(this.state.object)} */}
-        <JSONPretty id="json-pretty" data={this.state.object}></JSONPretty>
+        {/* <JSONPretty id="json-pretty" data={this.state.object}></JSONPretty> */}
         {/* <div className="a">{this.state.object}</div> */}
-        {/* <DaysContainer forecastInfo={this.state.forecastWeather} /> */}
+        <DaysContainer forecastInfo={this.state.forecastWeather} />
       </Fragment>
     );
   }
